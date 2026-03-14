@@ -1,0 +1,46 @@
+### Download VSCode
+wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+sudo apt update
+sudo apt upgrade
+sudo apt install ./code-latest.deb
+rm code-latest.deb
+code   # to open VSCode text editor
+
+### Install Git
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+sudo apt install git
+git --version   # verify version (at least 2.28)
+
+### Install Flatpak
+sudo apt install flatpak
+
+### Install KeePassXC
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --user flathub org.keepassxc.KeePassXC
+
+### Setup Git
+git config --global user.name "Your Name"
+git config --global user.email yourname@example.com
+git config --global init.defaultBranch main   # to set main folder
+git config --global pull.rebase false   # set default branch reconciliation behavior to merging
+git config --global core.editor "code --wait"   # to not forget commit message
+git config --get user.name   # verify
+git config --get user.email   # verify
+
+### Setup SSH Key -> Identifier for machine to connect to the server without having to type password everytime
+ls ~/.ssh/id_ed25519.pub   # check if you already have a SSH key
+ssh-keygen -t ed25519   # generates a key pair -> save in password manager
+
+### Link SSH Key with GitHub
+# Add SSH Key in GitHub profile in the browser
+# ssh -T git@github.com   # check and troubleshoot: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection?platform=linux
+
+### Git Basics
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
+git push
+git push origin main
+git add .
+git commit -m "message about change"
+git status
+git log
