@@ -47,7 +47,7 @@ ssh-keygen -t ed25519   # generates a key pair -> save in password manager
 git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
 git push
 git push origin main
-git add .
+git add $object   # can be folder or file or . for all
 git commit -m "message about change"
 git status
 git log
