@@ -11,6 +11,8 @@ flatpak install --user flathub org.keepassxc.KeePassXC
 % echo "deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable-v2" | sudo tee /etc/apt/sources.list.d/syncthing.list   # Add the "stable-v2" channel to your APT sources
 % echo "deb [signed-by=/etc/apt/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing candidate" | sudo tee /etc/apt/sources.list.d/syncthing.list   # Add the "candidate" channel to your APT sources
 % printf "Package: *\nPin: origin apt.syncthing.net\nPin-Priority: 990\n" | sudo tee /etc/apt/preferences.d/syncthing.pref   # Increase preference of Syncthing's packages ("pinning")
+% sudo apt install syncthing
+% syncthing
 
 ### Download VSCode
 wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
@@ -47,7 +49,7 @@ ssh-keygen -t ed25519   # generates a key pair -> save in password manager
 git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
 git push
 git push origin main
-git add $object   # can be folder or file or . for all
+git add .
 git commit -m "message about change"
 git status
 git log
