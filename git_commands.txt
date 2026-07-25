@@ -1,0 +1,24 @@
+### Setup Git
+git config --global user.name "Your Name"
+git config --global user.email yourname@example.com
+git config --global init.defaultBranch main   # to set main folder
+git config --global pull.rebase false   # set default branch reconciliation behavior to merging
+git config --global core.editor "code --wait"   # to not forget commit message
+git config --get user.name   # verify
+git config --get user.email   # verify
+
+### Main Git Routine
+git status
+git add . 
+git commit -m "fixme"
+git push origin main
+
+### Git Commands
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git   # clones a new repository from github.com to local
+git add .   # adds a specific file or folder to the staging area
+git add .   # adds everything in the current directory to the staging area
+git commit -m "fixme"   # creates a commit with the currently staged changes
+git push origin main   # uploads local commits on main to remote repository named origin
+git status   # check changes and what is staged
+git log   # shows most recent commit history
+
