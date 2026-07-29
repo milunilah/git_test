@@ -1,1 +1,2 @@
 CTRL + `   # open terminal
+!          # make html template available in an empty html file (hit enter)
