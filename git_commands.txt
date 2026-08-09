@@ -22,3 +22,10 @@ git push origin main   # uploads local commits on main to remote repository name
 git status   # check changes and what is staged
 git log   # shows most recent commit history
 
+# Clone repository to local
+cd repos
+git clone $ssh_link
+
+### Fork repository
+# https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo#forking-a-repository
+
