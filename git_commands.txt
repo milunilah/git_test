@@ -21,6 +21,7 @@ git commit -m "fixme"   # creates a commit with the currently staged changes
 git push origin main   # uploads local commits on main to remote repository named origin
 git status   # check changes and what is staged
 git log   # shows most recent commit history
+git log -1   # shows last commit
 
 # Clone repository to local
 cd repos
